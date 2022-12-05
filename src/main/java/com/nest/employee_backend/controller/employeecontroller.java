@@ -9,6 +9,12 @@ public class employeecontroller {
     @GetMapping("/")
     public String Homepage()
     {
-        return "Employee welcom page";
+        return "Employee welcome page";
+    }
+
+    @GetMapping("/add")
+    public String Add()
+    {
+        return "Employee add page";
     }
 }
