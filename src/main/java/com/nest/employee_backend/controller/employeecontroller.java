@@ -29,4 +29,10 @@ public class employeecontroller {
     {
         return "Employee the edit page";
     }
+
+    @GetMapping("/delete")
+    public String Delete()
+    {
+        return "Employee delete page";
+    }
 }
