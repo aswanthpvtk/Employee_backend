@@ -35,4 +35,9 @@ public class employeecontroller {
     {
         return "Employee delete page";
     }
+    @GetMapping("/viewall")
+    public  String Viewall()
+    {
+        return "Employee viewall page";
+    }
 }
