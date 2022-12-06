@@ -1,43 +1,24 @@
 package com.nest.employee_backend.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.nest.employee_backend.model.Employee;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class employeecontroller {
 
-    @GetMapping("/")
+    @PostMapping("/")
     public String Homepage()
     {
         return "Employee welcome page";
     }
 
-    @GetMapping("/add")
-    public String Add()
+
+
+    @PostMapping(path = "/adde",consumes = "application/json",produces = "application/json")
+    public String Empadd(@RequestBody Employee s)
     {
-        return "Employee add page";
+        System.out.println(s.getCname().toString());
+        return "Employee added successfully";
     }
 
-    @GetMapping("/search")
-    public String Search()
-    {
-        return "Employee search page";
-    }
-
-    @GetMapping("/edit")
-    public String Edit()
-    {
-        return "Employee the edit page";
-    }
-
-    @GetMapping("/delete")
-    public String Delete()
-    {
-        return "Employee delete page";
-    }
-    @GetMapping("/viewall")
-    public  String Viewall()
-    {
-        return "Employee viewall page";
-    }
 }
